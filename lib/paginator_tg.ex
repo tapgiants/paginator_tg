@@ -16,11 +16,11 @@ defmodule PaginatorTG do
       end
   """
 
-  alias Crm.PaginatorTG.{List, Options}
+  alias PaginatorTG.{List, Options}
 
   defmacro __using__(_opts) do
     quote do
-      alias Crm.PaginatorTG
+      alias PaginatorTG
 
       use Paginator
 
