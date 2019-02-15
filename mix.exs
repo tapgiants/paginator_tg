@@ -23,7 +23,8 @@ defmodule PaginatorTG.MixProject do
     [
       {:earmark, "~> 1.3", only: :dev},
       {:ex_doc, "~> 0.19", only: :dev},
-      {:credo, "~> 0.10", only: [:dev, :test], runtime: false}
+      {:credo, "~> 0.10", only: [:dev, :test], runtime: false},
+      {:paginator, "~> 0.6"}
     ]
   end
 end
