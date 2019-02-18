@@ -5,6 +5,8 @@ Decorates the result returned from the [Paginator](https://github.com/duffelhq/p
 the [Tap Giants](https://github.com/tapgiants) data conventions.
 All provided functions from the `Paginator` package are available via `PaginatorTG` package.
 
+[Documentation](https://hexdocs.pm/paginator_tg)
+
 ## Installation
 
 The package can be installed by adding `paginator_tg` to your list of dependencies in `mix.exs`:
