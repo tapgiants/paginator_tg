@@ -1,7 +1,7 @@
 defmodule PaginatorTG.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [
@@ -52,7 +52,7 @@ defmodule PaginatorTG.MixProject do
 
   defp description do
     """
-    Cursor based pagination wrapper arount Paginator package.
+    Cursor based pagination. An wrapper arount Paginator package.
     """
   end
 

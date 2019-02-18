@@ -75,7 +75,7 @@ defmodule PaginatorTG do
       cursor_fields: [:inserted_at, :id]
     )
   """
-  @callback paginate(queryable :: Ecto.Query.t(), opts :: PaginatorTG.Options.t()) ::
+  @callback paginate_tg(queryable :: Ecto.Query.t(), opts :: PaginatorTG.Options.t()) ::
               PaginatorTG.List.t()
 
   def paginate_tg(repo, queryable, opts) do
