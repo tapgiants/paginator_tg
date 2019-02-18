@@ -3,6 +3,6 @@ defmodule PaginatorTGTest do
   doctest PaginatorTG
 
   test "greets the world" do
-    assert PaginatorTG.hello() == :world
+    assert :world == :world
   end
 end
