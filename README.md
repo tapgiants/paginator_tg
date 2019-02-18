@@ -14,7 +14,7 @@ The package can be installed by adding `paginator_tg` to your list of dependenci
 ```elixir
 def deps do
   [
-    {:paginator_tg, "~> 0.1.0"}
+    {:paginator_tg, "~> 0.1.1"}
   ]
 end
 ```
