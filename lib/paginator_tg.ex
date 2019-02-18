@@ -40,6 +40,7 @@ defmodule PaginatorTG do
     * `:sort_direction` - The direction used for sorting. Defaults to `:desc`.
 
   ## Simple example
+
       query = from(ind in Industry, order_by: [desc: ind.inserted_at, desc: ind.id])
 
       %{
@@ -55,25 +56,26 @@ defmodule PaginatorTG do
 
 
   ## Example with cursors
-    query = from(ind in Industry, order_by: [desc: ind.inserted_at, desc: ind.id])
-    %{
-      list: list,
-      total_count: total_count,
-      page_info: %{
-        start_cursor: start_cursor,
-        end_cursor: end_cursor,
-        has_next_page: _has_next_page,
-        has_previous_page: _has_previous_page,
-      }
-    } = Repo.paginate_tg(query, cursor_fields: [:inserted_at, :id], first: 30)
 
-    query = from(ind in Industry, order_by: [desc: ind.inserted_at, desc: ind.id])
-    Repo.paginate_tg(
-      query,
-      after: end_cursor,
-      first: 30,
-      cursor_fields: [:inserted_at, :id]
-    )
+      query = from(ind in Industry, order_by: [desc: ind.inserted_at, desc: ind.id])
+      %{
+        list: list,
+        total_count: total_count,
+        page_info: %{
+          start_cursor: start_cursor,
+          end_cursor: end_cursor,
+          has_next_page: _has_next_page,
+          has_previous_page: _has_previous_page,
+        }
+      } = Repo.paginate_tg(query, cursor_fields: [:inserted_at, :id], first: 30)
+
+      query = from(ind in Industry, order_by: [desc: ind.inserted_at, desc: ind.id])
+      Repo.paginate_tg(
+        query,
+        after: end_cursor,
+        first: 30,
+        cursor_fields: [:inserted_at, :id]
+      )
   """
   @callback paginate_tg(queryable :: Ecto.Query.t(), opts :: PaginatorTG.Options.t()) ::
               PaginatorTG.List.t()
