@@ -1,7 +1,7 @@
 defmodule PaginatorTG.MixProject do
   use Mix.Project
 
-  @version "0.1.1"
+  @version "0.1.2"
 
   def project do
     [
@@ -43,7 +43,7 @@ defmodule PaginatorTG.MixProject do
       {:earmark, "~> 1.3", only: :dev},
       {:ex_doc, "~> 0.19", only: :dev},
       {:credo, "~> 0.10", only: [:dev, :test], runtime: false},
-      {:paginator, "~> 0.6"},
+      {:paginator, github: "duffelhq/paginator"},
       {:ecto, "~> 3.0"},
       {:ecto_sql, "~> 3.0"},
       {:postgrex, ">= 0.0.0", optional: true}
