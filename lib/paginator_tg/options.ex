@@ -10,6 +10,7 @@ defmodule PaginatorTG.Options do
   defstruct after: "",
             before: "",
             cursor_fields: [],
+            fetch_cursor_value_fun: nil,
             limit: @default_limit,
             sort_direction: @default_sort_direction,
             include_total_count: true
@@ -19,6 +20,8 @@ defmodule PaginatorTG.Options do
       after: to_nil_if_empty(opts[:after]),
       before: to_nil_if_empty(opts[:before]),
       cursor_fields: opts[:cursor_fields],
+      fetch_cursor_value_fun:
+        opts[:fetch_cursor_value_fun] || (&Paginator.default_fetch_cursor_value/2),
       limit: opts[:first] || @default_limit,
       sort_direction: opts[:sort_direction] || @default_sort_direction,
       include_total_count: true

@@ -43,7 +43,7 @@ defmodule PaginatorTG.MixProject do
       {:earmark, "~> 1.3", only: :dev},
       {:ex_doc, "~> 0.19", only: :dev},
       {:credo, "~> 0.10", only: [:dev, :test], runtime: false},
-      {:paginator, github: "duffelhq/paginator"},
+      {:paginator, github: "nikolay-slavov/paginator", branch: "feature/cursor-expression"},
       {:ecto, "~> 3.0"},
       {:ecto_sql, "~> 3.0"},
       {:postgrex, ">= 0.0.0", optional: true}
